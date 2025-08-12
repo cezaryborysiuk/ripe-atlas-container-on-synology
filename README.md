@@ -20,7 +20,7 @@ You can control key aspects of the probe via environment variables:
 | Variable         | Description                                   | Default     | Example                 |
 |------------------|-----------------------------------------------|-------------|-------------------------|
 | `TELNETD_PORT`   | Port used by Telnet daemon                    | `2023`      | `TELNETD_PORT=2023`     |
-| `HTTP_POST_PORT` | Port for HTTP POST interface                  | `2080`      | `HTTP_POST_PORT=2080`   |
+| `HTTP_POST_PORT` | Port for HTTP POST interface                  | `8080`      | `HTTP_POST_PORT=8080`   |
 | `RXTXRPT`        | Enable RX/TX report (`yes` or `no`)           | `yes`       | `RXTXRPT=yes`           |
 
 To override defaults, edit the relevant section in your Container Manager or adjust the `env_variables` entries:
@@ -66,7 +66,7 @@ Modify host paths as needed; mount points must remain unchanged.
 
 ***
 
-## Example Usage
+## Usage
 
 1. **Import (`ripe-atlas.json`) to the Synology Container Manager**
 2. **Container -> Action -> Import -> From local device**
