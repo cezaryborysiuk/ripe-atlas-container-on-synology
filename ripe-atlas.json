@@ -1,0 +1,85 @@
+{
+   "CapAdd" : ["NET_RAW", "KILL", "SETUID", "SETGID", "CHOWN", "FOWNER", "DAC_OVERRIDE"],
+   "CapDrop" : ["ALL"],
+   "cmd" : "ripe-atlas",
+   "cmd_v2" : "ripe-atlas",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : false,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "TELNETD_PORT",
+         "value" : "2023"
+      },
+      {
+         "key" : "HTTP_POST_PORT",
+         "value" : "8080"
+      },
+      {
+         "key" : "RXTXRPT",
+         "value" : "yes"
+      }
+   ],
+   "exporting" : false,
+   "id" : "163d9803d6bb7ec536500979b5ca1829cd88c186d6a31e42664310289659f437",
+   "image" : "jamesits/ripe-atlas:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "org.opencontainers.image.created" : "2025-04-03T07:20:37.825Z",
+      "org.opencontainers.image.description" : "This is the RIPE Atlas software probe packaged as a Docker image.",
+      "org.opencontainers.image.licenses" : "GPL-3.0",
+      "org.opencontainers.image.revision" : "dc8969120acb44e586fd3af3bbb6574e0d91257d",
+      "org.opencontainers.image.source" : "https://github.com/Jamesits/docker-ripe-atlas",
+      "org.opencontainers.image.title" : "docker-ripe-atlas",
+      "org.opencontainers.image.url" : "https://github.com/Jamesits/docker-ripe-atlas",
+      "org.opencontainers.image.version" : "5110"
+   },
+   "links" : [],
+   "memory_limit" : 1073741824,
+   "name" : "ripe-atlas",
+   "network" : [
+      {
+         "driver" : "host",
+         "name" : "host"
+      }
+   ],
+   "network_mode" : "host",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : true,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/ripe-atlas/atlas-probe-etc",
+         "is_directory" : true,
+         "mount_point" : "/etc/ripe-atlas",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/ripe-atlas/atlas-probe-run",
+         "is_directory" : true,
+         "mount_point" : "/run/ripe-atlas",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/ripe-atlas/atlas-probe-var",
+         "is_directory" : true,
+         "mount_point" : "/var/spool/ripe-atlas",
+         "type" : "rw"
+      }
+   ]
+}
